@@ -1,5 +1,5 @@
 # Functions go here
-def make_statement(statement, decoration):
+def make_statement(statement, decoration, lines):
     """Creates headings (3 lines), subheadings (2 lines) and
     emphasised text / mini-headings (1 line). Only use emoji for
     single line statements"""
@@ -9,7 +9,17 @@ def make_statement(statement, decoration):
 
     if lines == 1:
         print(middle)
+    elif lines == 2:
+        print(middle)
+        print(top_bottom)
+
+    else:
+        print(top_bottom)
+        print(middle)
+        print(top_bottom)
 
 
 # Main Routine goes here
-make_statement("Programming is Fun!", "👍")
+make_statement("Programming is Fun!", "👍", 1)
+make_statement("Programming is Still Fun!", "*", 2)
+make_statement("Emoji in Action", "🐍", 1)
